@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <h1>Conversor de Moedas</h1>
+    <form id="currency-form">
+        <label for="amount">Quantia:</label>
+        <input type="number" id="amount" name="amount" required>
+        <br>
+        <label for="from_currency">De:</label>
+        <select id="from_currency" name="from_currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="BRL">BRL</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="INR">INR</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+        <br>
+        <label for="to_currency">Para:</label>
+        <select id="to_currency" name="to_currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="BRL">BRL</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="INR">INR</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+        <br>
+        <button type="submit">Converter</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('currency-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const amount = document.getElementById('amount').value;
+            const fromCurrency = document.getElementById('from_currency').value;
+            const toCurrency = document.getElementById('to_currency').value;
+            const apiKey = 'your_api_key_here';
+
+            fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+                .then(response => response.json())
+                .then(data => {
+                    const rate = data.rates[toCurrency];
+                    const convertedAmount = amount * rate;
+                    document.getElementById('result').innerText = `${amount} ${fromCurrency} é igual a ${convertedAmount} ${toCurrency}`;
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    document.getElementById('result').innerText = 'Erro ao converter moeda.';
+                });
+        });
+    </script>
+</body>
+</html>
