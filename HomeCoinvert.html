@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Criptomoedas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="top">
+        <h1>Coinverter</h1>
+        <nav class="menu-desktop">
+            <u>
+                <div id="topIcons">
+                    <a href="#"></a>
+                        <button type="button">texto1</button>
+                    </a>
+                    <a href="#">
+                        <button type="button">texto2</button>
+                    </a>
+                <input type="text" placeholder="busca"></input>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <div class="converter">
+        <h2>Conversor de Criptomoedas</h2>
+        <input type="number" id="amount" placeholder="Quantidade">
+        <select id="fromCurrency">
+            <option value="bitcoin">Bitcoin (BTC)</option>
+            <option value="ethereum">Ethereum (ETH)</option>
+            <option value="litecoin">Litecoin (LTC)</option>
+        </select>
+        <select id="toCurrency">
+            <option value="usd">Dólar Americano (USD)</option>
+            <option value="eur">Euro (EUR)</option>
+            <option value="brl">Real Brasileiro (BRL)</option>
+        </select>
+        <button onclick="convert()">Converter</button>
+        <p id="result"></p>
+    </div>
+    <script src="myscripts.js"></script>
+</body>
+</html>

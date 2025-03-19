@@ -1,0 +1,153 @@
+body {
+    background-color: #9FC587;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    position: relative;
+}
+.coinverter {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #9FC587;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+}
+.coin {
+    color: #9FC587;
+}
+.verter {
+    color: #000000;
+}
+.container {
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #6C9457;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 2px;
+    width: 1300px;
+    height: 15px;
+}
+button {
+    width: 140px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color: #9FC587;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 24px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 8px center;
+}
+button:hover {
+    background-color: #9FC587;
+}
+button:active {
+    background-color: #d9d9d9;
+}
+.home-button {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22m2.25%2012%208.954-8.955c.44-.439%201.152-.439%201.591%200L21.75%2012M4.5%209.75v10.125c0%20.621.504%201.125%201.125%201.125H9.75v-4.875c0-.621.504-1.125%201.125-1.125h2.25c.621%200%201.125.504%201.125%201.125V21h4.125c.621%200%201.125-.504%201.125-1.125V9.75M8.25%2021h8.25%22%20%2F%3E%3C%2Fsvg%3E');
+}
+.criptomoeda-button {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M12%206v12m-3-2.818.879.659c1.171.879%203.07.879%204.242%200%201.172-.879%201.172-2.303%200-3.182C13.536%2012.219%2012.768%2012%2012%2012c-.725%200-1.45-.22-2.003-.659-1.106-.879-1.106-2.303%200-3.182s2.9-.879%204.006%200l.415.33M21%2012a9%209%200%201%201-18%200%209%209%200%200%201%2018%200Z%22%20%2F%3E%3C%2Fsvg%3E');
+}
+.grafico-button {
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M3%2013.125C3%2012.504%203.504%2012%204.125%2012h2.25c.621%200%201.125.504%201.125%201.125v6.75C7.5%2020.496%206.996%2021%206.375%2021h-2.25A1.125%201.125%200%200%201%203%2019.875v-6.75ZM9.75%208.625c0-.621.504-1.125%201.125-1.125h2.25c.621%200%201.125.504%201.125%201.125v11.25c0%20.621-.504%201.125-1.125%201.125h-2.25a1.125%201.125%200%200%201-1.125-1.125V8.625ZM16.5%204.125c0-.621.504-1.125%201.125-1.125h2.25C20.496%203%2021%203.504%2021%204.125v15.75c0%20.621-.504%201.125-1.125%201.125h-2.25a1.125%201.125%200%200%201-1.125-1.125V4.125Z%22%20%2F%3E%3C%2Fsvg%3E');
+}
+.arrow-icon{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 24px;
+}
+.converter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+} /*Seção do conversor*/
+.converter-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+} /*Campos de conversão*/
+.converter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}/**/
+.currency-box {
+  width: 415px;
+  height: 125px;
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}/*retangulos*/
+.currency-flag {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}/* bandeiras*/
+.amount-input,
+.amount-display {
+  font-size: 48px;
+  font-weight: bold;
+  opacity: 0.65;
+  background: transparent;
+  text-align: center;
+  width: 136px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}/*Entrada e exibição dos valores*/
+.currency-code {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.5;
+  font-family: 'Inter', sans-serif;
+}/* codigo da moeda*/
+.country-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}/*infos do seletor de país*/
+.country-flag {
+  width: 1.5rem;
+  height: 1rem;
+} /*infos das bandeiras*/
+.select-container {
+  display: flex;
+  width: 415px;
+  height: 40px;
+  padding: 0px 16px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 20px;
+  background: #D9D9D9;
+  opacity: 0.75;
+  border: none;
+} /* campo de seleção do país*/
