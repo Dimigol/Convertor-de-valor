@@ -11,21 +11,23 @@
         <div class="coinverter">
             <span class="coin">Coin</span><span class="verter">verter</span>
         </div>
-        <a href="HomeCoinvert.html" class="home-button active">Home</a>
-        <a href="CriptoCoinvert.html" class="criptomoeda-button">Criptomoeda</a>
-        <a onclick="graficos()" class="grafico-button">Gráficos</a>
+            <a href="HomeCoinvert.html" class="home-button active">Home</a>
+            <a href="CriptoCoinvert.html" class="criptomoeda-button">Criptomoeda</a>
+            <a href="GraficosCoinvert.html"="graficos()" class="grafico-button">Gráficos</a>
     </div>
     <div class="search-container">
         <div class="containerSearch">
             <div class="currency-search">
                 <div class="search-icon"></div>
-                <input type="text" id="countrySearch" placeholder="Buscar país..." class="search-input">
+                <label for="moedaOrigem"> Moeda de Origem:</label>
+                <select id="moedaOrigem"></select>
             </div>
         </div>
         <div class="containerSearch">
             <div class="currency-search">
                 <div class="search-icon"></div>
-                <input type="text" id="countrySearch2" placeholder="Buscar país..." class="search-input">
+                <label for="moedaDestino">Moeda de Destino:</label>
+                <select id="moedaDestino"></select>
             </div>
         </div>
     </div>
@@ -38,5 +40,6 @@
             <div class="circleFlag"></div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
