@@ -180,4 +180,26 @@ background-size: contain;
   color: black;
 }
 
+header
+{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6C9457;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.input-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Bandeiras, valores, aba para digitar valor e botão copiar e colar*/
+#label
+{
+  font-size: 100%;
+}
