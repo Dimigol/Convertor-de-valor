@@ -1,37 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coinvert</title>
-    <link rel="stylesheet" href="GraficosCoinvert.css">
-</head>
-<body>
-    <div class="container">
-        <div class="coinverter">
-            <span class="coin">Coin</span><span class="verter">verter</span>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinverter</title>
+    <link rel="stylesheet" href="GraficosCoinvert.css" />
+  </head>
+  <body>
+    <!-- Page header -->
+    <header>
+      <span> Coin<b>verter</b> </span>
+      <div>
+        <a href="HomeCoinvert.html">
+          <img src="./assets/home-icon.svg" alt="home icon" />
+          Home
+        </a>
+        <a href="CriptoCoinvert.html">
+          <img src="./assets/currency-icon.svg" alt="home icon" />
+          Criptomoedas
+        </a>
+        <a href="GraficosCoinvert.html" class="active">
+          <img src="./assets/graph-icon.svg" alt="home icon" />
+          Gráficos
+        </a>
+      </div>
+    </header>
+
+    <!-- Page content -->
+
+    <main>
+        <div class="search-input-wrapper">
+          <img src="./assets/search-icon.svg" alt="" />
+          <input type="text" placeholder="Procurar moeda ou criptomoeda" />
         </div>
-            <a href="HomeCoinvert.html" class="home-button">Home</a>
-            <a href="CriptoCoinvert.html" class="criptomoeda-button">Criptomoeda</a>
-            <a href="GraficosCoinvert.html"="graficos()" class="grafico-button active">Gráficos</a>
-    </div>
-    <div class="containerGrafico">
-         <!-- Container que engloba pesquisa e grafico  -->
-         <div class="containerSearch">
-            <div class="currency-search">
-                <div class="search-icon"></div>
-                <label for="moedaOrigem">Escolha sua moeda:</label>
-                <select id="moedaOrigem"></select>
-            </div>
+
+        <div class="search-input-wrapper">
+          <img src="./assets/search-icon.svg" alt="" />
+          <input type="text" placeholder="Procurar moeda ou criptomoeda" />
         </div>
-        <div class="containerSearch">
-            <div class="currency-search">
-                <div class="search-icon"></div>
-                <label for="moedaDestino">Escolha sua moeda:</label>
-                <select id="moedaDestino"></select>
-            </div>
-        </div>
-    </div>
-    
-</body>
+
+      <section class="currency-container">
+        <!-- <h1>Currency Container</h1> -->
+      </section>
+    </main>
+  </body>
 </html>

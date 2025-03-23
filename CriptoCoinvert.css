@@ -1,183 +1,223 @@
-body {
-    background-color: #9FC587;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
-    padding: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+body {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    position: relative;
-  }
-  .coinverter {
+    flex-direction: column;
+    background-color: #9FC587;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
     display: flex;
-    align-items: baseline;
-    justify-content: flex-start;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #9FC587;
-    font-size: 30px;
-    font-family: 'Inter', sans-serif;
-  }
-  .coin {
-    color: #9FC587;
-  }
-  .verter {
-    color: #000000;
-  }
-  .container {
-    padding: 1rem;
-    border-radius: 2rem;
+    align-items: center;
+    justify-content: space-between;
     background-color: #6C9457;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+header > span {
+    font-size: 18px;
+    font-weight: normal;
+    color: #406711;
+}
+
+header > span > b {
+    font-weight: normal;
+    color: black;
+}
+
+header > div {
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    position: absolute;
-    top: 2px;
-    width: 1300px;
-    height: 2%;
-  }
-  a {
-    width: 140px;
-    height: 18px;
+    align-items: center;
+    gap: 1rem;
+}
+
+header > div > a {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    border-color: transparent;
-    border-radius: 20px;
-    background-color: #9FC587;
-    transition: background-color 0.3s;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    padding-left: 24px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    background-position: 8px center;
+    gap: 0.5rem;
     text-decoration: none;
     color: black;
-  }
-  .container a:hover {
-    background-color: #b3beac;
-  }
-  
-  a:active {
-    background-color: #d9d9d9;
-  }
-  .active {
-  background-color: #d9d9d9;
-  }
-  .home-button {
-    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22m2.25%2012%208.954-8.955c.44-.439%201.152-.439%201.591%200L21.75%2012M4.5%209.75v10.125c0%20.621.504%201.125%201.125%201.125H9.75v-4.875c0-.621.504-1.125%201.125-1.125h2.25c.621%200%201.125.504%201.125%201.125V21h4.125c.621%200%201.125-.504%201.125-1.125V9.75M8.25%2021h8.25%22%20%2F%3E%3C%2Fsvg%3E');
-  }
-  .criptomoeda-button {
-    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M12%206v12m-3-2.818.879.659c1.171.879%203.07.879%204.242%200%201.172-.879%201.172-2.303%200-3.182C13.536%2012.219%2012.768%2012%2012%2012c-.725%200-1.45-.22-2.003-.659-1.106-.879-1.106-2.303%200-3.182s2.9-.879%204.006%200l.415.33M21%2012a9%209%200%201%201-18%200%209%209%200%200%201%2018%200Z%22%20%2F%3E%3C%2Fsvg%3E');
-  }
-  .grafico-button {
-    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M3%2013.125C3%2012.504%203.504%2012%204.125%2012h2.25c.621%200%201.125.504%201.125%201.125v6.75C7.5%2020.496%206.996%2021%206.375%2021h-2.25A1.125%201.125%200%200%201%203%2019.875v-6.75ZM9.75%208.625c0-.621.504-1.125%201.125-1.125h2.25c.621%200%201.125.504%201.125%201.125v11.25c0%20.621-.504%201.125-1.125%201.125h-2.25a1.125%201.125%200%200%201-1.125-1.125V8.625ZM16.5%204.125c0-.621.504-1.125%201.125-1.125h2.25C20.496%203%2021%203.504%2021%204.125v15.75c0%20.621-.504%201.125-1.125%201.125h-2.25a1.125%201.125%200%200%201-1.125-1.125V4.125Z%22%20%2F%3E%3C%2Fsvg%3E');
-  }
-  .arrow-icon{
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'/%3E%3C/svg%3E");
-    width: 24px;
-    height: 24px;
-  }
-  .circle {
-  width: 50px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background-color: lightgray;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  }
-  .currency-box .circle {
-  background: url(<path-to-flag-image>) no-repeat center;
-  }
-  .currency-box {
-  width: 415px;
-  height: 125px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #D9D9D9;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #9FC587;
+    border-radius: 20px;
+    padding: 0 1rem;
+}
+
+header > div > a > img {
+    height: 18px;
+    width: 18px;
+}
+
+header > div > a:hover {
+    background: #D9D9D9;
+    transition: all 0.3s ease-in-out;
+}
+
+main {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  padding-left: 70px;
-  }
-  .containerRetangle {
-  display: flex;
-  align-items: center;
+  margin: 2rem;
+  width: 100%;
   gap: 20px;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  }
-  .arrow {
-  width: 24px;
-  height: 24px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  }
-  .search-container {
+}
+header > div > a.active {
+  background: #D9D9D9;
+}
+.search-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  background: #D9D9D9;
+  border-radius: 20px;
+  width: 415px;
+  margin-top: 80px;
+  gap: 20px;
+  margin-inline-start: 40px;
+}
+
+.search-input-wrapper > img {
+    height: 15px;
+    width: 15px;
+}
+
+.search-input-wrapper > input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    align-items: center;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.currency-container {
+    background: #D9D9D9;
+    width: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.currency-box {
+    width: 415px;
+    min-height: 125px;
+    border-radius: 20px;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
-    flex-direction: row;
-    gap: 5rem;
+    justify-content: center;
+    position: relative;
+    padding-left: 70px;
+    flex-direction: column;
+}
+
+.currency-input {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 0.5rem;
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    margin-left: 200px;
+    text-align: center;
+    font-size: 1.2rem;
+    outline: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.currency-input::placeholder {
+    color: #A0A0A0;
+}
+
+.result-input {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 0.5rem;
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    margin-left: 200px;
+    font-size: 1.2rem;
+    outline: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.containerRetangle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     justify-content: center;
     position: absolute;
-    align-items: center;
-    margin-top: 220px;
-  }
-  .currency-search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    width: 440px;
-    height: 20px;
-  }
-  .containerSearch {
-    display: flex;
-    width: 440px;
-    height: 20px;
-    padding: 0px 16px;
-    align-items: center;
-    gap: 14px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    opacity: 0.75;
-    background: #D9D9D9;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    padding-left: 24px;
-  }
-  .search-icon {
-    width: 12px;
-    height: 12px;
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"%3E%3Cpath stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /%3E%3C/svg%3E');
-    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  .search-input {
+    background-size: contain;
+}
+
+.copy-paste-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.copy-btn {
+    width: 40px;
+    height: 40px;
     border: none;
-    outline: none;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    font-size: 14px;
-    color: black;
-  }
-  
-  /* Bandeiras, valores, aba para digitar valor e botão copiar e colar*/
+    background-color: transparent;
+    cursor: pointer;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.60;
+}
+
+.circleFlag {
+    width: 60px;
+    height: 60px;
+    background-color: #406711;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: absolute;
+    bottom: 40px;
+}
