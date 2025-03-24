@@ -1,12 +1,11 @@
 console.log("homeScript.js iniciado")
 
-fetchData();
 
 
 document.addEventListener("DOMContentLoaded", function () { //Para copiar os dados dos seletores
     const selectOrigem = document.getElementById("moedaOrigem");
     const selectDestino = document.getElementById("moedaDestino");
-
+    fetchData();
     selectDestino.innerHTML = selectOrigem.innerHTML;
 });
 
